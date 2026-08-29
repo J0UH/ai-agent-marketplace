@@ -15,7 +15,7 @@ Specialised agents vary in risk, latency, cost, and evidence needs. The platform
 
 ## Foundation and adaptation
 
-The experimentation studio is adapted from Microsoft's [AutoGen Studio](https://github.com/microsoft/autogen), while the agent catalog and product operating model were developed for Aryze. The two are intentionally separated so upstream runtime work is not presented as an in-house invention.
+The experimentation studio is adapted from Microsoft's [AutoGen Studio](https://github.com/microsoft/autogen). The agent catalog and product operating model sit outside that upstream runtime, so the two bodies of work remain clearly separated.
 
 ## What the system covers
 
@@ -48,7 +48,7 @@ accDescr: An agent configuration cannot run until permissions and expected cost 
 - Expose permissions and cost before a run starts.
 - Keep evaluation data attached to the version that produced it.
 
-<sub>Built at Aryze around Microsoft AutoGen Studio and private Aryze product work. Microsoft and AutoGen contributors retain upstream authorship and licensing; Aryze owns its private catalog, integration, product, and operating work.</sub>
+<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
 
 ## Talk through a similar problem
 
