@@ -24,7 +24,7 @@ Specialised agents vary in risk, latency, cost, and evidence needs. The platform
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Agent catalog"]
     n1["Configuration"]
     n2["Runtime"]
