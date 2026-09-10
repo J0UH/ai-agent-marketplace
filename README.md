@@ -1,23 +1,28 @@
-[← All systems](https://github.com/J0UH) · [Agentic systems](https://github.com/J0UH/agentic-systems)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="Seven distinct modular units occupy separate bays with one bay illuminated" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Agentic systems](https://github.com/J0UH/agentic-systems)
 
 # AI agent marketplace
 
-A marketplace for agents is not a grid of prompts. Each agent needs a clear job, known tools, understandable limits, a way to evaluate quality, and an operating model that survives more than one impressive demo.
+Exploring how specialised agents can become understandable products with clear jobs, tools, and limits.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="AI agent marketplace illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-Specialised agents vary in risk, latency, cost, and evidence needs. The platform had to make those differences visible while giving users a consistent way to configure and run them.
+Two agents can look similar in a catalogue while behaving very differently once they start work. One may need sensitive tools, another may take longer, and a third may produce a result that needs review.
 
+The marketplace work focuses on making those differences understandable. Someone choosing an agent should be able to see what job it is meant to do and what a successful result would look like.
 
-## Foundation and adaptation
+## Knowing what you are starting
+
+Configuration includes the tools and permissions involved, the expected cost, and how the run will be observed. Those details belong before the run starts.
+
+The experimentation studio adapts Microsoft's AutoGen Studio. The catalogue and product operating model sit around that foundation and have their own responsibilities: discovery, configuration, evaluation, and the handling of results.
+
+I want an agent's evaluation to remain attached to the version that produced it. That makes comparisons more useful and helps explain whether a change improved the work or simply made the demo look different.
+
+## Built on
 
 The experimentation studio is adapted from Microsoft's [AutoGen Studio](https://github.com/microsoft/autogen). The agent catalog and product operating model sit outside that upstream runtime, so the two bodies of work remain clearly separated.
 
-## What the system covers
+## What the work covers
 
 - Agent discovery and configuration
 - Tool and permission declarations
@@ -26,7 +31,8 @@ The experimentation studio is adapted from Microsoft's [AutoGen Studio](https://
 - Multi-agent experimentation
 - Product and operator interfaces
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -42,14 +48,13 @@ accDescr: An agent configuration cannot run until permissions and expected cost 
     evaluate -->|Yes| history["Versioned result"]
 ```
 
-## Build notes
+</details>
 
-- Describe the job and stop condition before the persona.
-- Expose permissions and cost before a run starts.
-- Keep evaluation data attached to the version that produced it.
+## Related work
 
-<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
+- [Agentic systems](https://github.com/J0UH/agentic-systems)
+- [Personal AI employee](https://github.com/J0UH/personal-ai-employee)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=AI%20agent%20marketplace).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=AI%20agent%20marketplace).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
